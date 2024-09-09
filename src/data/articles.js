@@ -1,8 +1,49 @@
 import React from "react";
 import publicationImage_1 from './publications/publication_1.png';
 import publicationImage_2 from './publications/publication_2.png';
+import publicationImage_3 from './publications/publication_3.png';
 
-function article_1() {
+function article_3() {
+	return {
+		date: "23 August 2024",
+		title: "Instruct-DeBERTa: A Hybrid Approach for Aspect-based Sentiment Analysis on Textual Reviews",
+		description:
+			"Aspect-Based Sentiment Analysis (ABSA) focuses on extracting sentiments related to specific aspects within a text, offering deeper insights than traditional sentiment analysis. Our hybrid model, Instruct-DeBERTa, achieves the best performance for aspect term extraction (ATE) and aspect sentiment classification (ASC) on SemEval 2014 datasets, significantly improving accuracy across domains.",
+		keywords: [
+			"Instruct-DeBERTa: A Hybrid Approach for Aspect-based Sentiment Analysis on Textual Reviews",
+			"Koshila",
+			"Koshila Isuranda",
+		],
+		style: `
+				.article-content {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+
+				.randImage {
+					align-self: center;
+					outline: 2px solid blue;
+				}
+				`,
+		body: (
+			<React.Fragment>
+				<div className="article-content">
+					<div className="paragraph">Click below to read the paper</div>
+						<a href="https://arxiv.org/pdf/2408.13202" target="_blank" rel="noopener noreferrer">
+							<img
+							src={publicationImage_3}
+							alt="publication"
+							className="randImage"
+							/>
+					</a>
+				</div>
+			</React.Fragment>
+		),
+	};
+}
+
+function article_2() {
 	return {
 		date: "3 July 2024",
 		title: "Aspect-Based Sentiment Analysis Techniques: A Comparative Study",
@@ -42,7 +83,7 @@ function article_1() {
 	};
 }
 
-function article_2() {
+function article_1() {
 	return {
 		date: "20 March 2024",
 		title: "“GradesGo”-A Comprehensive Practical Framework for Calculating Grade One Admission Marks",
@@ -82,6 +123,6 @@ function article_2() {
 	};
 }
 
-const myArticles = [article_1, article_2];
+const myArticles = [article_3, article_2, article_1];
 
 export default myArticles;
